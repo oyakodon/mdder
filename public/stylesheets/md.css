@@ -1,0 +1,39 @@
+#content {
+  font-family: Meiryo, Segoe WPC,Segoe UI,SFUIText-Light,HelveticaNeue-Light,sans-serif;
+  font-size: 24px;
+  padding-left: 20px;
+  line-height: 44px;
+}
+
+#content table {
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+}
+
+#content table th {
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border: 1px solid #ccc;
+}
+
+#content table td {
+	padding: 10px;
+	vertical-align: top;
+	border: 1px solid #ccc;
+}
+
+#content h3 {
+  border-bottom: 1px solid #ccc;
+  padding: .25em 0 .5em .75em;
+  border-left: 6px solid #ccc;
+
+}
+
+#content h4 {
+  padding: .25em 0 .5em .75em;
+  border-left: 2px solid #ccc;
+
+}
+

@@ -1,0 +1,33 @@
+extends layout
+
+block head
+  title Mdder
+  link(rel='stylesheet', href='/stylesheets/jumbotron.css')
+  link(rel='stylesheet', href='/stylesheets/app.css')
+  link(rel='stylesheet', href='/stylesheets/md.css')
+
+block content
+  .jumbotron#top
+    .container
+      h1 Mdder
+      p Markdown to Html and view it.
+
+  .container
+    .row
+      .col-md-12
+        div(ng-bind-html="content")#content
+
+  .floatBox(ng-style="{ height: e_visible? '50%' : 'auto'}")
+    input#input(type="file", file-model="mdFile", ng-show="", ng-cloak)
+    textarea#editor(ng-model='raw_md' ng-change='MdChanged()', ng-show="e_visible", ng-cloak)
+    button.btn(ng-click="EditBtnClicked()", ng-class="{ 'btn-primary': e_visible, 'btn-warning': !e_visible }", style="left: 10px;", ng-cloak) {{ ebtn_text }}
+    button.btn.btn-info(ng-click="FileDialog()", style="left: 75px;") Open
+
+  .jumpTop
+    button.btn.btn-primary(ng-click="jumpTo('#top')") Top
+
+block scripts
+  script(src='/javascripts/angular-smooth-scroll.js')
+  script(src='/javascripts/index.js')
+  script(src="/bower_components/marked/lib/marked.js")
+
